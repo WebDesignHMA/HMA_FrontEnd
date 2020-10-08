@@ -1,5 +1,7 @@
+import "./Auth.css";
 import React from 'react'
 import axios from 'axios';
+
 
 class Login extends React.Component {
   constructor(props) {
@@ -38,21 +40,25 @@ class Login extends React.Component {
       <div className="Login-Container">
       <p className="Wishlist-Login-Heading">WISHLIST</p>
       <p className="Wishlist-Login-Caption">Sign into your Wishlist!</p>
-      <form onSubmit={this.handleSubmit}>
+      <form
+      className="Login-Form" 
+      onSubmit={this.handleSubmit}>
         <input type="text" 
-               id="Login-Email"
+               className="Login-Input"
                name="email"
                placeholder="Email"
                value={this.state.email}
                onChange={this.handleChange}
                />
         <input type="password" 
-               id="Login-Password"
+               className="Login-Input"
                name="password" 
                placeholder="Password"
                value={this.state.password}
                onChange={this.handleChange}/>
-        <input type="submit" value="Submit"/>
+        <input 
+        id="Login-Submit-Button"
+        type="submit" value="Login"/>
       </form> 
     </div>
     );
