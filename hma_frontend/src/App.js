@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css';
 import Login from './Auth/Login.js'
 import SignUp from './Auth/SignUp.js'
+import EditProfile from './Auth/EditProfile.js'
 import MainPage from './MainPage/MainPage.js'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +26,9 @@ function App() {
               <Link 
               className="Nav-Link"
               to="/login">Login</Link>
+              <Link 
+              className="Nav-Link"
+              to="/profile">Profile</Link>
           </ul>
         </nav>
         <Switch>
@@ -32,6 +37,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp />
+          </Route>
+          <Route path="/profile">
+            <EditProfile />
           </Route>
           <Route path="/">
             <MainPage/>
