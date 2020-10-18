@@ -4,6 +4,7 @@ import Login from './Auth/Login.js'
 import SignUp from './Auth/SignUp.js'
 import EditProfile from './Auth/EditProfile.js'
 import MainPage from './MainPage/MainPage.js'
+import CreateWishlist from './MainPage/CreateWishlist.js'
 
 import {
   BrowserRouter as Router,
@@ -29,6 +30,9 @@ function App() {
               <Link 
               className="Nav-Link"
               to="/profile">Profile</Link>
+              <Link 
+              className="Nav-Link"
+              to="/createwishlist">Create Wishlist</Link>
           </ul>
         </nav>
         <Switch>
@@ -40,6 +44,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <EditProfile />
+          </Route>
+          <Route path="/createwishlist">
+            <CreateWishlist />
           </Route>
           <Route path="/">
             <MainPage/>
