@@ -1,0 +1,23 @@
+.Wishlist-Item-Container {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.Item-Description {
+  position: relative;
+  margin-top: 1%;
+  left: 4%;
+}
+
+.Wishlist-Name {
+  font-family: Alatsi;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+}
+
+.Item-Link {
+  font-size: 20px;
+}
