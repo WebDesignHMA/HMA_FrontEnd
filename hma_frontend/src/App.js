@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Login from './Auth/Login.js'
+import SignUp from './Auth/SignUp.js'
+import MainPage from './MainPage/MainPage.js'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Amrit, Naeem, Hasibul, Lifu <br/>
-          CSC 473 Website Design F20<br/>
-          Prof. Michelle Sasson
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div>
+        <nav className="Home-Nav-Bar">
+          <ul className="Home-Nav-Bar-List">
+              <Link className="Nav-Link"
+                to="/">Main Page</Link>
+              <Link className="Nav-Link"
+              to="/signup">Sign Up</Link>
+              <Link 
+              className="Nav-Link"
+              to="/login">Login</Link>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/">
+            <MainPage/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     </div>
   );
 }
